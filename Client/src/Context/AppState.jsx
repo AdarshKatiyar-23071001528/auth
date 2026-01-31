@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const AppState = (props) => {
 
-    const url = 'http://localhost:1000/api/user'
+    const url = import.meta.env.VITE_API_URL;
     const[Users,setUsers] = useState([])
     const data = 10;
     useEffect(()=>{

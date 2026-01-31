@@ -28,40 +28,18 @@ const Register = () => {
 
     return (
         <>
-            {/* <div className="container">
-                <h1 className='text-center'>User Register</h1>
-                <form onSubmit={submitHandler} className='my-3'>
-                    <div className="mb-3">
-                        <label for="exampleInputEmail1" className="form-label">Name</label>
-                        <input name="name" value={formData.name} onChange={onChangeHandler}  type="name" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    </div>
-                    <div className="mb-3">
-                        <label for="exampleInputEmail1" className="form-label">Email address</label>
-                        <input name="email" value={formData.email} onChange={onChangeHandler}   type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div className="mb-3">
-                        <label for="exampleInputPassword1" className="form-label">Password</label>
-                        <input name="password" value={formData.password} onChange={onChangeHandler}  type="password" className="form-control" id="exampleInputPassword1" />
-                    </div>
-                    <div className='d-grid col-6 mx-auto my-3'>
-                        <button type="submit" className="btn btn-primary">Register</button>
-                    </div>
-
-                </form>
-            </div> */}
-
+           
 
 
 
 
 
             <div className='nav'>
-                <div class="page">
-                    <div class="container">
+                <div className="page">
+                    <div className="container">
 
 
-                        <div class="left">
+                        <div className="left">
                             <center><h2>Register</h2><br /></center>
 
                             <form id="loginForm" onSubmit={submitHandler}>
@@ -72,16 +50,16 @@ const Register = () => {
                                 <input name="password" value={formData.password} onChange={onChangeHandler} type="password" id="password" placeholder="Password" />
 
 
-                                <div class="remember">
+                                <div className="remember">
                                     <input type="checkbox" id="rememberMe" />
-                                    <label for="rememberMe">Remember Me</label>
+                                    <label htmlFor="rememberMe">Remember Me</label>
                                 </div>
 
-                                <a href="#" class="forgot">Forgot Password?</a>
+                                <a href="#" className="forgot">Forgot Password?</a>
 
                                 <button type="submit">Register</button>
 
-                                <p class="signup-text">
+                                <p className="signup-text">
                                     Already have an account? <a href="/">Login</a>
                                 </p>
 
@@ -90,14 +68,14 @@ const Register = () => {
                             </form>
                         </div>
 
-                        <div class="right">
+                        <div className="right">
                             <h1>Welcome to <span>SKIT</span></h1>
-                            <p class="tagline">Dreams Come True Here!</p>
+                            <p className="tagline">Dreams Come True Here!</p>
 
 
                             <img src="./s1.jpg"
                                 alt="Student Login Illustration"
-                                class="illustration" />
+                                className="illustration" />
                         </div>
 
                     </div>
