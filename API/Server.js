@@ -28,5 +28,5 @@ mongoose.connect(process.env.MONGO_URL,{
 .catch(err => console.log(err.message));
 
 
-const port = process.env.PORT
-app.listen(port,() =>console.log("Server listening",port));
+// const port = process.env.PORT
+// app.listen(port,() =>console.log("Server listening",port));
