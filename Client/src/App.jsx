@@ -1,6 +1,6 @@
 import React from 'react'
-import AppContext from './Context/appContext';
-import { useContext } from 'react';
+
+
 import AllUsers from '../Users/AllUsers';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Register from '../Users/Register';

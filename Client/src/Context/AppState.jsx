@@ -1,5 +1,5 @@
 import React from 'react'
-import AppContext from './appContext'
+import AppContext from './AppContext'
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';

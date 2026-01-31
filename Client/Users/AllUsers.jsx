@@ -1,5 +1,5 @@
 import React from 'react'
-import AppContext from '../src/Context/appContext'
+import AppContext from '../src/Context/AppContext'
 import { useContext } from 'react'
 
 const AllUsers = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import AppContext from '../src/Context/appContext';
+import AppContext from '../src/Context/AppContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
