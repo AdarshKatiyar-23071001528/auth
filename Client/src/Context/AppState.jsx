@@ -22,7 +22,6 @@ const AppState = (props) => {
         }
         fetchUser();
     },[])
-
     //register User
     const register = async(name,email,password) =>{
             const api = await axios.post(`${url}/register`,
