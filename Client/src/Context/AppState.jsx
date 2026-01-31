@@ -11,13 +11,13 @@ const AppState = (props) => {
     const data = 10;
     useEffect(()=>{
         const fetchUser = async() =>{
-            const api = await axios.get(`${url}/allUser`,{
+            const api = await axios.get(`${url}/alluser`,{
                 headers:{
                     "Content-Type":"Application/json"
                 },
                 withCredentials: true
             })
-            console.log(api.data.alluser);
+            console.log(api.data);
             setUsers(api.data.alluser);
         }
         fetchUser();

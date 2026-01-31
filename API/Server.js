@@ -14,8 +14,7 @@ app.use(cors({
     methods:["GET","POST","PUT","DElETE"],
     credentials: true
 }))
-//testing router
-app.get("/",(req,res) => res.json({message:"Home Routes", success:true}) );
+
 
 //user Router
 app.use('/api/user',userRouter)
@@ -32,4 +31,6 @@ if(process.env.NODE_ENV !== 'production'){
 const port = process.env.PORT
 app.listen(port,() =>console.log("Server listening",port));
 }
+
+
 export default app;

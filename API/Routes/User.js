@@ -5,5 +5,5 @@ const router = express.Router();
 // register user
 router.post("/register",register); //api/user/register
 router.post("/login",login) //api/user/login
-router.get("/allUser",allUser) //api/user/allUser
-export default router
+router.get("/alluser",allUser) //api/user/allUser
+export default router;
