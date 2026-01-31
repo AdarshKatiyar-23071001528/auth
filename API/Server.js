@@ -1,36 +1,30 @@
 import express from 'express';
-import userRouter from './Routes/User.js'
-import bodyParser from 'express';
-import { config } from 'dotenv';
+import userRouter from './Routes/User.js';
 import mongoose from 'mongoose';
 import cors from 'cors';
-config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 const app = express();
-app.use(bodyParser.json());
 
-//cors error
+app.use(express.json());
+
+// ✅ Proper CORS
 app.use(cors({
-    origin:true,
-    methods:["GET","POST","PUT","DElETE"],
-    credentials: true
-}))
+  origin: [
+    'http://localhost:5173',
+    'https://auth-c8ib.vercel.app'
+  ],
+  credentials: true
+}));
 
+// Routes
+app.use('/api/user', userRouter);
 
-//user Router
-app.use('/api/user',userRouter)
-
-//mongo connection
-mongoose.connect(process.env.MONGO_URL,{
-    dbName:"Authentication",
-
-}).then(()=> console.log("Databasae connect"))
-.catch(err => console.log(err.message));
-
-
-if(process.env.NODE_ENV !== 'production'){
-const port = process.env.PORT
-app.listen(port,() =>console.log("Server listening",port));
-}
-
+// Mongo
+mongoose.connect(process.env.MONGO_URL, {
+  dbName: "Authentication",
+}).then(() => console.log("Database connected"))
+  .catch(err => console.log(err.message));
 
 export default app;

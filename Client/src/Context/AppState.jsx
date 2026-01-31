@@ -11,7 +11,7 @@ const AppState = (props) => {
     const data = 10;
     useEffect(()=>{
         const fetchUser = async() =>{
-            const api = await axios.get(`${url}/alluser`,{
+            const api = await axios.get(`${url}/api/user/alluser`,{
                 headers:{
                     "Content-Type":"Application/json"
                 },
@@ -24,7 +24,7 @@ const AppState = (props) => {
     },[])
     //register User
     const register = async(name,email,password) =>{
-            const api = await axios.post(`${url}/register`,
+            const api = await axios.post(`${url}/api/user/register`,
                 {name,email,password},{
                 headers:{
                     "Content-Type":"Application/json"
@@ -35,7 +35,7 @@ const AppState = (props) => {
           return api.data;
         }
          const login = async(email,password) =>{
-            const api = await axios.post(`${url}/login`,
+            const api = await axios.post(`${url}/api/user/login`,
                 {email,password},{
                 headers:{
                     "Content-Type":"Application/json"
